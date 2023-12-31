@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body onload="starterfunctions()">
+    <header id="header">
+                <div class="header-content">
+                    <img src="img/obs-logo.jpg" alt="obs-logo">
+                <h1>Student Management System</h1>
+                    <div class="user-info">
+                        <img src="img/user.png" alt="user" class="user-photo" >
+                        <div class="user-details">
+                            <span class="user-number">200759056</span>
+                            <span class="user-name">John Doe</span>
+                        </div>
+                    </div>
+
+                    <div class="icons">
+                        <img src="img/anasayfa.jpg" alt="anasayfa">
+                        <img src="img/notification.png" alt="notificatSion">
+                        <span class="semester">2023-2024 Autumn Period</span>
+                    </div>
+            </div>
+    </header>
+
+    <div class="boxes">
+        <div class="box" style="display: flex;">
+            <img src="img/communication.png" alt="communication" class="communication-image" style="width: 50%; height: auto; max-width: 50px; float: left;">
+            <p class="Consultant-information" style="display: flex;">Consultant Information: </p>
+            <P>Dr.Öğr.Üyesi Ahmet Dal</P>
+            </p>
+        </div>
+
+
+        <div class="box" style="display: flex;">
+            <img src="img/certficate.png" alt="certficate" class="certficate-image" style="width: 50%; height: auto; max-width: 50px; float: left;">
+            <p class="Educational-information " style="display: flex;">Educational Information:</p>
+            <p>Engineering Faculty - Computer Engineering Student - 3rd Class</p>
+        </div>
+        <div class="exam-dates-container">
+            <img src="img/time-management.png" alt="time-management">
+        <div class="Exam-dates-list">
+            <h2>Exam Dates</h2>
+            <ul>
+                <li>
+                    <span class="exam-name">Exam Name : Data Structures and Algorithms</span>
+                    <span class="exam-date">Date: 17.12.2023</span>
+                </li>
+                <li>
+                    <span class="exam-name">Exam Name : Web Development and Programming</span>
+                    <span class="exam-date">Date:15.12.2023</span>
+                </li>
+                <li>
+                    <span class="exam-name">Exam Name :Computer Networks</span>
+                    <span class="exam-date">Date: 10.12.2023</span>
+                </li>
+                <li>
+                    <span class="exam-name">Exam Name : Mobile Application Development</span>
+                    <span class="exam-date">Date:09.12.2023</span>
+                </li>
+                <li>
+                    <span class="exam-name">Exam Name : Database Management System</span>
+                    <span class="exam-date">Date: 14.12.2023</span>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+<section>
+    <div id="viewResults">
+        <h2 class="ResultHeader">Results</h2>
+
+        <table id="TableResults">
+            <thead id="TableHeaderresult">
+            </thead>
+            <tbody id="TableBodyResults"></tbody>
+        </table>
+    </div>
+
+
+    <div id="Choose">
+        <div class="ChooseCourse">
+            <label>Choose Course:</label>
+            <select id="selectCourse"></select>
+        </div>
+
+        <div class="ChooseStudent">
+            <label>Choose Student:</label>
+            <select id="selectStudent"></select>
+        </div>
+    </div>
+
+
+    <div id="addCourse">
+
+        <h2>Add Course</h2>
+        <form>
+            <label for="courseId">Course Id:</label>
+            <input type="text" id="courseId" placeholder="Enter course id">
+            <label for="courseName">Course Name:</label>
+            <input type="text" id="courseName" placeholder="Enter course name">
+            <label for="PointScale">Point scale:</label>
+
+            <select id="PointScale">
+            <option value="7">7</option>
+            <option value="10">10</option>
+            </select>
+
+            <label>Ects:</label>
+            <select id="Ects">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        
+            <input type="submit" class="btn" id="addCourseButton" value="Add" onclick="addCourse(event)">
+            <input type="submit" class="btn" id="updateCourseButton" value="Update" onclick="updateCourse(event)">
+        </form>
+    </div>
+
+
+    <div id="addStudent">
+        <h2>Add Student</h2>
+        <form>
+            <label for="studentID">Student ID:</label>
+            <input type="text" id="studentID" placeholder="Enter student ID">
+
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" placeholder="Enter student name">
+
+            <label for="studentSurname">Student Surname:</label>
+            <input type="text" id="studentSurname" placeholder="Enter student surname">
+
+            <input type="submit" class="btn" id="addStudentButton" value="Add" onclick="addStudent(event)">
+            <input type="submit" class="btn" id="updateStudentButton" value="Update" onclick="updateStudent(event)">
+        </form>
+    </div>
+    <div id="addStudentToCourse">
+        <h2>Add Student To Course</h2>
+        <form>
+        <label for="studentID">Student ID:</label>
+        <input type="text" id="studentID" placeholder="Enter student ID">
+
+        <label for="courseID">Course Id:</label>
+        <input type="text" id="courseID" placeholder="Enter course id">
+
+        <label for="midtermScore">Midterm Score:</label>
+        <input type="number" id="midtermScore" placeholder="Enter midterm score">
+
+        <label for="finalScore">Final Score:</label>
+        <input type="number" id="finalScore" placeholder="Enter final score">
+
+        <input type="submit" class="btn" id="addStudentToCourseButton" value="Add" onclick="addStudentToCourseBtn(event)">
+        <input type="submit" class="btn" id="updateStudentToCourseButton" value="Update" onclick="updateStudentToCourseBtn(event)">
+    </form>
+    </div>
+
+    <div id="searchStudent">
+        <label>
+            Search Student
+        </label>
+        <input type="text" id="searchStudentInput" placeholder="search student">
+        <input type="submit" class="btn" id="searchStudentButton" value="Search" onclick="searchStudentBtn(event)">
+
+    </div>
+    <div id="searchCourse">
+        <label>
+            Search Course
+        </label>
+        <input type="text" id="searchCourseInput" placeholder="search course">
+        <input type="submit" class="btn" id="searchCourseButton" value="Search" onclick="searchCourseBtn(event)">
+    </div>
+
+</section>
+    <script src="script.js"></script>
+    
+   
+</body>
+</html>

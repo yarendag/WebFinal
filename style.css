@@ -1,0 +1,276 @@
+/* Resetting default styles and setting global styles */
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/* Styling for the header section */
+#header{
+    background-color: #007bff;
+    padding: 10px 20px;
+    text-align: left;
+}
+/* Styling for the header content, including logo and user information */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header .logo{
+    max-width: 80px;
+    height: auto;
+}
+
+#header h1{
+    color:#333;
+    margin: 0;
+    display: inline-block;
+}
+/* Styling for user information section in the header */
+.user-info{
+    display: flex;
+    align-items: center;
+}
+#header .user-photo{
+    max-width: 50px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.user-details{
+    display: flex;
+    flex-direction: column;
+    color:#333;
+}
+.user-number{
+    margin-bottom: 5px;
+}
+#header .user-name{
+    font-weight: 100;
+}
+#header .icons{
+    display:flex;
+    align-items: center;
+}
+#header .semester{
+    margin-left: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+#header .icons img{
+    max-width: 50px;
+    height: auto;
+    margin-right: 100px;
+    border-radius: 50%;
+}
+#header img{
+    max-width: 200px;
+    height: auto;
+    margin-right: 10px;
+    border: none;
+}
+
+
+.container{
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10x rgba(0, 0, 0, 0.1);
+}
+/* Styling for boxes section */
+.boxes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+}
+.boxes .box{
+    width: 33.33%;
+    height: 100px;
+    background-color: hsl(184, 88%, 50%);
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+.boxes .box:first-child{
+    width: 33.33%;
+}
+.boxes .box:first-child img {
+    float: left;
+}
+.boxes .box:nth-child(2){
+    width: 33.33%;
+}
+/* Styling for communication image */
+.communication-image{
+    width: 50%;
+    height: auto;
+    max-width: 50px;
+}
+/* Styling for consultant info */
+.consultant-info{
+    width: 100%;
+    height: auto;
+    max-width: 50px;
+    float: left;
+}
+/* Styling for exam dates container */
+.exam-dates-container {
+    width: 100%;
+    height: 100px;
+    background-color: hsl(184, 88%, 50%);
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .exam-dates { 
+    position: relative;
+  }  
+
+  .exam-dates-container > img{
+    width: 5%;
+
+  }
+  /* Styling for exam dates list */
+  .exam-dates-list {
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+
+  }
+  
+  .exam-dates-list h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .exam-dates-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .exam-dates-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .exam-dates-list .exam-name {
+    width: 70%;
+  }
+  
+  .exam-dates-list .exam-date {
+    width: 30%;
+    text-align: right;
+  }
+ /* Styling for headings */ 
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* div {
+
+} */
+/* Styling for certificate image */
+.certificate-image{
+    width: 50%;
+    height: auto;
+    max-width: 50px;
+    float: left;
+}
+/* Styling for common headings */
+h1, h2{
+    color: #333;
+}
+/* Styling for forms and form elements */
+form{
+    margin-bottom: 20px;
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+button{
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #0056b3;
+}
+/* Styling for tables */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td{
+    border: 1 px solid #ddd;
+    background-color: #f2f0f0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th{
+    background-color: #2f94ff;
+    color: #fff;
+}
+td:nth-child(even){
+    background-color: #e0dfdf;
+}
+/* Styling for sections */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#addCourse, #addStudent, #addStudentToCourse{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+/* Styling for buttons */
+.btn:hover {
+    color: #fff;
+    background-color: #0056b3;
+    border-color: #0056b3;
+    box-shadow: 0 0 10px #0056b3;
+}
+/* Styling for specific elements */
+#Choose{
+    margin-left:2rem;
+}
